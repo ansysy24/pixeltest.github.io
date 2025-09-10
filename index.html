@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showcase - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Car Showcase</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car1.html" class="nav-link">Tesla Model S</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car2.html" class="nav-link">BMW M3</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car3.html" class="nav-link">Mercedes AMG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car4.html" class="nav-link">Audi R8</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car5.html" class="nav-link">Porsche 911</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h2 class="page-title">Featured Cars</h2>
+            <p class="page-subtitle">Discover our collection of premium vehicles</p>
+            
+            <div class="cars-grid">
+                <div class="car-card" onclick="trackCarClick('tesla')">
+                    <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop" alt="Tesla Model S" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Tesla Model S</h3>
+                        <p class="car-description">Electric luxury sedan with cutting-edge technology</p>
+                        <button class="view-details-btn" onclick="trackViewDetails('tesla')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card" onclick="trackCarClick('bmw')">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=300&fit=crop" alt="BMW M3" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">BMW M3</h3>
+                        <p class="car-description">High-performance sports sedan</p>
+                        <button class="view-details-btn" onclick="trackViewDetails('bmw')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card" onclick="trackCarClick('mercedes')">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=300&fit=crop" alt="Mercedes AMG" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes AMG</h3>
+                        <p class="car-description">Luxury performance coupe</p>
+                        <button class="view-details-btn" onclick="trackViewDetails('mercedes')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card" onclick="trackCarClick('audi')">
+                    <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=300&fit=crop" alt="Audi R8" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Audi R8</h3>
+                        <p class="car-description">Supercar with V10 engine</p>
+                        <button class="view-details-btn" onclick="trackViewDetails('audi')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="car-card" onclick="trackCarClick('porsche')">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop" alt="Porsche 911" class="car-image">
+                    <div class="car-info">
+                        <h3 class="car-name">Porsche 911</h3>
+                        <p class="car-description">Iconic sports car legend</p>
+                        <button class="view-details-btn" onclick="trackViewDetails('porsche')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Car Showcase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

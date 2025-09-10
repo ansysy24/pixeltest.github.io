@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes AMG - Car Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Car Showcase</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car1.html" class="nav-link">Tesla Model S</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car2.html" class="nav-link">BMW M3</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car3.html" class="nav-link active">Mercedes AMG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car4.html" class="nav-link">Audi R8</a>
+                </li>
+                <li class="nav-item">
+                    <a href="car5.html" class="nav-link">Porsche 911</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="car-detail">
+                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=400&fit=crop" alt="Mercedes AMG" class="car-detail-image">
+                <div class="car-detail-info">
+                    <h2 class="car-detail-title">Mercedes AMG GT</h2>
+                    <p class="car-detail-description">
+                        The Mercedes-AMG GT represents the pinnacle of Mercedes-Benz performance and luxury. 
+                        With its handcrafted AMG V8 engine, stunning design, and cutting-edge technology, 
+                        it delivers an unforgettable driving experience that combines power with elegance.
+                    </p>
+                    
+                    <div class="car-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Engine</div>
+                            <div class="spec-value">4.0L Twin-Turbo V8</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Power</div>
+                            <div class="spec-value">469 HP</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">0-60 mph</div>
+                            <div class="spec-value">3.7 seconds</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Top Speed</div>
+                            <div class="spec-value">189 mph</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Transmission</div>
+                            <div class="spec-value">7-Speed DCT</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Price</div>
+                            <div class="spec-value">$115,900</div>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html" class="back-btn" onclick="trackBackClick()">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Car Showcase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
