@@ -16,7 +16,7 @@
     
     <!-- AdRetriever Tracking -->
     <script>
-    (function(w, d){(r=function(){adretriever._.push(arguments)})&&(r._=[]);w.adretriever||(w.adretriever=r);adretriever("setArWebisteId", "6a10f528");var u=new URL("https://app.adretriever.com/pixel.js");var a=d.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src",u);a.setAttribute("async","async");d.body.appendChild(a);})(window,document);
+    (function(w, d){(r=function(){adretriever._.push(arguments)})&&(r._=[]);w.adretriever||(w.adretriever=r);adretriever("setArWebisteId", "6a10f528");var u=new URL("https://app.adretriever.com/pixel.js");var a=d.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src",u);a.setAttribute("async","async");if(d.body){d.body.appendChild(a);}else{d.addEventListener('DOMContentLoaded',function(){d.body.appendChild(a);});}})(window,document);
     </script>
     <!-- End AdRetriever Tracking -->
 </head>
