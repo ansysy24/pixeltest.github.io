@@ -22,7 +22,9 @@ This project has been refactored from a static website to a dynamic template-bas
 pixeltest/
 ├── index.html              # Main dynamic page
 ├── demo.html               # Demo page showing the system
-├── base-template.html      # Base template (reference)
+├── config-switcher.html    # Configuration management interface
+├── config.js               # Configuration settings
+├── tracking-templates.js   # Tracking script templates
 ├── vehicles-data.js        # Vehicle data in JSON format
 ├── app.js                  # Main application logic
 ├── script.js              # Tracking functions (updated)
@@ -60,6 +62,8 @@ pixeltest/
 3. **Performance**: Single page application with client-side routing
 4. **Scalability**: Easy to add new features or modify existing ones
 5. **DRY Principle**: No more duplicate HTML code
+6. **Flexible Tracking**: Switch between GTM and AdRetriever easily
+7. **Configuration Management**: Easy-to-use config switcher interface
 
 ## 🚀 Usage
 
@@ -81,6 +85,12 @@ pixeltest/
 
 2. The navigation and content will automatically update!
 
+### Switching Tracking Providers
+1. Open `config-switcher.html` in your browser
+2. Select either "Google Tag Manager" or "AdRetriever Tracking"
+3. Click "Apply Configuration"
+4. The website will automatically use the new tracking system
+
 ### Modifying Vehicle Data
 - Edit the vehicle object in `vehicles-data.js`
 - Changes are immediately reflected across the site
@@ -88,6 +98,11 @@ pixeltest/
 ### Customizing Templates
 - Modify the `renderHomePage()` and `renderVehicleDetail()` methods in `app.js`
 - Update CSS in `styles.css` as needed
+
+### Configuration Management
+- Edit `config.js` to change tracking IDs or other settings
+- Use `config-switcher.html` for easy switching between providers
+- Configuration is saved in localStorage for persistence
 
 ## 🧪 Testing
 

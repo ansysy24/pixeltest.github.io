@@ -36,10 +36,14 @@ class CarShowcaseApp {
         const app = document.getElementById('app');
         if (!app) return;
 
+        const trackingScripts = getTrackingScripts();
+
         app.innerHTML = `
+            ${trackingScripts.body}
+            
             <nav class="navbar">
                 <div class="nav-container">
-                    <h1 class="nav-title">Car Showcase</h1>
+                    <h1 class="nav-title">${CONFIG.app.title}</h1>
                     <ul class="nav-menu" id="nav-menu">
                         ${this.renderNavigation()}
                     </ul>
@@ -54,7 +58,7 @@ class CarShowcaseApp {
 
             <footer class="footer">
                 <div class="container">
-                    <p>&copy; 2024 Car Showcase. All rights reserved.</p>
+                    <p>&copy; ${CONFIG.app.year} ${CONFIG.app.title}. All rights reserved.</p>
                 </div>
             </footer>
         `;
