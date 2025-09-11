@@ -1,27 +1,3 @@
-// Pixel tracking function
-function adretriever(eventType, pixelName, pixelId) {
-    console.log(`Pixel Event: ${eventType}, Pixel: ${pixelName}, ID: ${pixelId}`);
-    
-    // In a real implementation, this would send data to your analytics service
-    // For testing purposes, we'll just log the events
-    const eventData = {
-        event: eventType,
-        pixel: pixelName,
-        id: pixelId,
-        timestamp: new Date().toISOString(),
-        url: window.location.href
-    };
-    
-    // Store events in localStorage for testing
-    let events = JSON.parse(localStorage.getItem('pixelEvents') || '[]');
-    events.push(eventData);
-    localStorage.setItem('pixelEvents', JSON.stringify(events));
-    
-    // Display event in console for testing
-    console.log('Pixel Event Data:', eventData);
-}
-
-// Track car card clicks
 function trackCarClick(carName) {
     adretriever("pixelEvent", "test1", "d273310c");
     
