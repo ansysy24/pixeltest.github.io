@@ -1,39 +1,10 @@
 function trackCarClick(carName) {
     adretriever("pixelEvent", "test1", "d273310c");
-    
-    // Navigate to car detail page
-    const carPages = {
-        'tesla': 'car1.html',
-        'bmw': 'car2.html',
-        'mercedes': 'car3.html',
-        'audi': 'car4.html',
-        'porsche': 'car5.html'
-    };
-    
-    if (carPages[carName]) {
-        window.location.href = carPages[carName];
-    }
 }
 
 // Track view details button clicks
 function trackViewDetails(carName) {
     adretriever("pixelEvent", "test2", "d273310c");
-    
-    // Prevent event bubbling to avoid double tracking
-    event.stopPropagation();
-    
-    // Navigate to car detail page
-    const carPages = {
-        'tesla': 'car1.html',
-        'bmw': 'car2.html',
-        'mercedes': 'car3.html',
-        'audi': 'car4.html',
-        'porsche': 'car5.html'
-    };
-    
-    if (carPages[carName]) {
-        window.location.href = carPages[carName];
-    }
 }
 
 // Track page views
@@ -44,38 +15,12 @@ function trackPageView() {
 // Track back button clicks
 function trackBackClick() {
     adretriever("pixelEvent", "test2", "d273310c");
-    window.location.href = 'index.html';
 }
 
 // Initialize tracking when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Track page view
     trackPageView();
-    
-    // Add click tracking to all car cards
-    const carCards = document.querySelectorAll('.car-card');
-    carCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const carName = this.querySelector('.car-name').textContent.toLowerCase().replace(/\s+/g, '');
-            trackCarClick(carName);
-        });
-    });
-    
-    // Add click tracking to view details buttons
-    const detailButtons = document.querySelectorAll('.view-details-btn');
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const carName = this.closest('.car-card').querySelector('.car-name').textContent.toLowerCase().replace(/\s+/g, '');
-            trackViewDetails(carName);
-        });
-    });
-    
-    // Add back button tracking if on detail page
-    const backButton = document.querySelector('.back-btn');
-    if (backButton) {
-        backButton.addEventListener('click', trackBackClick);
-    }
 });
 
 // Utility function to view all tracked events (for testing)
